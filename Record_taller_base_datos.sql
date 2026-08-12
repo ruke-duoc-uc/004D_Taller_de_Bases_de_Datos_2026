@@ -8,6 +8,9 @@ DECLARE
     );
     -- DATOS_CLIENTE es un tipo de dato creado por nosotros
     -- Para manejarlo debemos crear una variable de tipo DATO_CLIENTE
+    -- Un tipo de dato Record sirve para acotar la informacion de multiples variables
+    -- en una sola
+    -- AL DECLARAR UN RECORD PARA
     v_rut CLIENTE.RUT%TYPE;
     v_email CLIENTE.EMAIL%TYPE;
     v_nombre CLIENTE.NOMBRE%TYPE;
@@ -25,7 +28,7 @@ BEGIN
     FROM CLIENTE
     WHERE CLIENTE_ID = 2;
     DBMS_OUTPUT.PUT_LINE('El rut del usuario es '|| v_rut);
-    DBMS_OUTPUT.PUT_LINE('Datos del Cliente '||v_d_cliente.nombre_cliente)
+    DBMS_OUTPUT.PUT_LINE('Datos del Cliente '||v_d_cliente.nombre_cliente);
 END;
 /
 --El "/"" detiene el boton "Run Script" en el punto donde se coloca 
