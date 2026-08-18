@@ -28,5 +28,5 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('NOMBRE : '||v_record_boleta.nombre_cliente);
     DBMS_OUTPUT.PUT_LINE('                      Neto $:  '||v_record_boleta.monto_bruto_transaccion);
     DBMS_OUTPUT.PUT_LINE('                 Descuento $:    '||v_record_boleta.descuento_aplicado);
-    
+    DBMS_OUTPUT.PUT_LINE('******************************************')
 END;
