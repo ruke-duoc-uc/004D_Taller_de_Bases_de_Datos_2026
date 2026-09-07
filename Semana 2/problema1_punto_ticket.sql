@@ -16,10 +16,14 @@ DECLARE
 BEGIN
    DBMS_OUTPUT.PUT_LINE('-----GANANCIAS DE LOS EVENTOS-----');
     OPEN c_plata_evento_l;
- 
+-- Para explorar todos los datos de un CURSOR se debe abrir un
+-- LOOP para que maneje cada objeto
     LOOP
+    -- FETCH obtiene la fila siguiente en cada vuelta, y reemplaza los datos 
+    -- de las variables
         FETCH c_plata_evento_l INTO v_nombre_localidad, v_ganancias,v_conteo;
-        
+        -- EXIT se encargara de matar el LOOP de forma prematura
+        -- cuando el cursor no tenga mas datos que ofrecer
         EXIT WHEN c_plata_evento_l%NOTFOUND;
         
         DBMS_OUTPUT.PUT_LINE('Ganancias de la localidad ' || v_nombre_localidad || ': ' || v_ganancias);

@@ -30,7 +30,7 @@ BEGIN
     SELECT STOCK_DISPONIBLE 
     INTO v_stock
     FROM LOCALIDAD_EVENTO
-    WHERE localidad_evento_id = 1;
+    WHERE localidad_evento_id = 2;
     IF v_stock <=0 THEN
         RAISE_APPLICATION_ERROR(
             -20001,

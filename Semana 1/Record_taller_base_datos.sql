@@ -10,7 +10,6 @@ DECLARE
     -- Para manejarlo debemos crear una variable de tipo DATO_CLIENTE
     -- Un tipo de dato Record sirve para acotar la informacion de multiples variables
     -- en una sola
-    -- AL DECLARAR UN RECORD PARA
     v_rut CLIENTE.RUT%TYPE;
     v_email CLIENTE.EMAIL%TYPE;
     v_nombre CLIENTE.NOMBRE%TYPE;
