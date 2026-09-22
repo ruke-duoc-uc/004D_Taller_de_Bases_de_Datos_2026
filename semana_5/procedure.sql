@@ -1,0 +1,14 @@
+CREATE OR REPLACE PROCEDURE INSERTAR_NOMBRE_P(
+    p_rut IN CLIENTE.RUT%TYPE,
+    p_nombre IN CLIENTE.NOMBRE%TYPE,
+    p_apellido IN CLIENTE.APELLIDO%TYPE,
+    p_email IN CLIENTE.EMAIL%TYPE
+)
+IS
+BEGIN
+    INSERT INTO CLIENTE(RUT,NOMBRE,APELLIDO,EMAIL)
+    VALUES(p_rut,p_nombre,p_apellido,p_email);
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Usuario registrado exitosamente');
+END;
+/
