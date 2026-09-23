@@ -8,6 +8,8 @@ END;
 --Crear un procedimiento que retorne los datos de un cliente
 --segun su id
 CREATE OR REPLACE PROCEDURE BUSCAR_NOMBRE_P(
+-- Los atributos de procedure son IN y OUT
+
     p_id_entrada IN NUMBER,
     
     p_rut OUT CLIENTE.RUT%TYPE,
@@ -43,4 +45,3 @@ BEGIN
     BUSCAR_NOMBRE_P(1,v_rut,v_nombre,v_apellido,v_email);
 END;
 /
-select * from cliente
