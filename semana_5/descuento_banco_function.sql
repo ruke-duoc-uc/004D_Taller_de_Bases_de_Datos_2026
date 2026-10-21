@@ -16,7 +16,7 @@ END;
 /
 declare
     v_id_banco NUMBER := 1;
-    v_precio_bruto NUMBER := 10000000;
+    v_precio_bruto NUMBER := 100000;
     v_precio_descuento NUMBER;
     v_char1 VARCHAR2(100);
     v_char2 VARCHAR2(100);
